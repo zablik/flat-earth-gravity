@@ -1,0 +1,103 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    /*background-image: url("images/Nebula-10898.jpg");*/
+}
+
+.score {
+    padding: 15px;
+    width: 300px;
+    height: 65px;
+    opacity: 0.6;
+    background-color: black;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    z-index: 1;
+    margin: 50px auto;
+    color: white;
+    font-size: 24px;
+}
+
+.score table {
+    opacity: 1;
+    background: rgba(0,0,0,0.4);
+}
+
+.score .deviation-sum {
+    text-align: center;
+    font-size: 36px;
+}
+
+#playground {
+    width: 1000px;
+    height: 1000px;
+    /*background-color: #00A6C7;*/
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+}
+
+.block {
+    vertical-align: top;
+    width: 25px;
+    height: 25px;
+    /*background-color: grey;*/
+    display: inline-block;
+    margin: 0;
+    background-size: contain;
+}
+
+.block:hover {
+    background-image: url("images/ground/plus-brick.png");
+    cursor: pointer;
+}
+
+.block.block-ground:hover {
+    background-image: url("images/ground/cross-brick.png");
+}
+
+
+.block.block-ground:active {
+    /*background-color: red;*/
+}
+
+.block.block-ground {
+    /*background-color: saddlebrown;*/
+    background-image: url("images/ground/brick.png");
+    /*background-image: url("images/ground/stone-clipart-transparent-13.png");*/
+
+}
+.block.block-surface {
+    /*background-color: yellow;*/
+}
+.arrow {
+    position: absolute;
+    overflow: hidden;
+    pointer-events: none;
+    width: 10px;
+    transform-origin: top;
+}
+
+.arrow img {
+    pointer-events: none;
+    position: absolute;
+    bottom: 0;
+    width: 10px;
+}
+
+.universe-image {
+    z-index: -1000;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    /*margin:-960px 0 0 -1280px;*/
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 350s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
