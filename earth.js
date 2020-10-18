@@ -422,10 +422,6 @@
             }
         }
 
-        // if (block.getId() === '6-6' || block.getId() === '13-6') {
-            // console.log(gravity.gX +  '/' + gravity.g + ' => ' + block.getId()+  ': '+ self.universe.toDegrees(angle))
-        // }
-
         self.gravityArrows[block.getId()].css({
             height: height,
             transform: 'rotate(' + angle + 'rad)'
@@ -582,56 +578,8 @@
     God.prototype.buildPerfection = function () {
         var self = this;
 
-
         self.determineGroundShape();
         self.defineWorkplace();
-
-        // console.log(self.worksapce);
-    };
-
-    God.prototype.determineGroundShape = function () {
-        var self = this,
-            groundBlock,
-            id,
-            x,
-            space;
-
-        // for (id in self.playground.allocatedBlocks['ground']) {
-        //     if (!self.playground.allocatedBlocks['ground'].hasOwnProperty(id)) {
-        //         continue;
-        //     }
-        //
-        //     groundBlock = self.playground.allocatedBlocks['ground'][id];
-        //
-        //     if (!self.groundShape.hasOwnProperty(groundBlock.getX())) {
-        //         self.groundShape[groundBlock.getX()] = [];
-        //     }
-        //
-        //     self.groundShape[groundBlock.getX()].push(groundBlock.getY())
-        // }
-
-        // space = self.playground.getSpace();
-
-        // for (x in space) {
-        //     if (!space.hasOwnProperty(x)) {
-        //         continue;
-        //     }
-        //
-        //
-        // }
-
-        // for (x in self.groundShape) {
-        //     if (!self.groundShape.hasOwnProperty(x)) {
-        //         continue;
-        //     }
-        //
-        //     self.groundShape[x].sort(function (a, b) {
-        //         return a - b;
-        //     });
-        // }
-
-        // console.log(self.playground);
-        // console.log(self.groundShape);
     };
 
     God.prototype.defineWorkplace = function () {
@@ -666,8 +614,6 @@
 
         minY = parseInt(minY);
 
-        // console.log(self.playground);
-
         self.worksapce = {
             x: {
                 min: 0,
@@ -684,18 +630,6 @@
 
         return self.worksapce;
     };
-
-
-    God.prototype.findBestBlockToAdd = function () {
-        var self = this;
-
-        //for ()
-
-        //self
-    };
-
-
-
 
     // MODAL
     $(document).ready(function () {
@@ -739,6 +673,5 @@
 
         god.buildPerfection();
     });
-
 
 })(jQuery);
