@@ -508,6 +508,7 @@
             if (self.type !== null) {
                 self.element.removeClass('block-' + self.type);
                 if (type === null) {
+                    delete self.playground.gravity.result[self.getId()];
                     self.hideVisible();
                 }
             }
@@ -578,7 +579,6 @@
     God.prototype.buildPerfection = function () {
         var self = this;
 
-        self.determineGroundShape();
         self.defineWorkplace();
     };
 
