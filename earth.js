@@ -465,7 +465,8 @@
         function getTransmissionType(block) {
             var transmissions = {
                 ground: null,
-                null: 'ground'
+                null: 'ground',
+                surface: null
             };
 
             return transmissions[block.getType()];
@@ -510,6 +511,9 @@
         if (self.type !== type) {
             if (self.type !== null) {
                 self.element.removeClass('block-' + self.type);
+                if (type === null) {
+                    self.hideVisible();
+                }
             }
 
             self.type = type;
@@ -519,6 +523,13 @@
             }
         }
     };
+
+    Block.prototype.hideVisible = function () {
+        this.element.css({'background-image': ''});
+        if (this.playground.gravityArrows[this.getId()] !== undefined) {
+            this.playground.gravityArrows[this.getId()].remove();
+        }
+    }
 
     Block.prototype.getId = function () {
         return this.id;
