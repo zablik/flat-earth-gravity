@@ -2,5 +2,5 @@
 
 https://zablik.github.io/flat-earth-gravity/
 
-![demo](https://imgur.com/XzhVI68)
+![demo](https://i.imgur.com/XzhVI68.jpeg)
 
